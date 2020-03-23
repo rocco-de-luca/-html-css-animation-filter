@@ -1,0 +1,354 @@
+/*general rules*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #fff;
+}
+
+h1 {
+    margin: 20px;
+    text-align: center;
+}
+
+h3 {
+    margin: 20px; 
+}
+
+p {
+    margin: 20px;
+}
+
+/*end the general style*/
+
+
+/*esercizio 1*/
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.box1 {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 1px solid blue;
+    transition: background 2s; 
+}
+
+.box1:hover {
+    background: blue;
+}
+
+/*esercizio 2*/
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background: yellow;
+    transition: width 2s;
+}
+.box2:active {
+    width: 100%;
+}
+
+/*esercizio 3*/
+
+.box3 {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background: green;
+    transition: border-radius 1s;
+}
+.box3:hover {
+    border-radius: 100%;
+}
+
+/*esercizio 4*/
+
+.box4 {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background: red;
+    transition: opacity 1s;
+}
+.box4:hover {
+    opacity: 0;
+}
+
+/*esercizio 5*/
+
+.box5 {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0px 10px 80px;
+    background: pink;
+    transition: transform 1s;
+}
+.box5:hover {
+    transform: scale(2);
+}
+.box5:active {
+    transform: scale(.5);
+}
+
+/*esercizio 6*/
+.box6 {
+    width: 500px;
+    margin: 10px;
+}
+.box6-img:hover { 
+    filter: grayscale(1);
+}
+
+/*esercizio 7*/
+
+.box7 {
+    width: 500px;
+    margin: 10px;
+}
+
+.box7-img {
+    transition: filter 2s;
+}
+
+.box7-img:hover {
+    filter: grayscale(.6) sepia(.5);
+}
+
+/*esercizio 8*/
+
+.box8{
+    width: 500px;
+    margin: 10px;
+}
+.box8-img {
+    transition: filter 2s, border-radius 2s;
+}
+.box8-img:hover {
+    filter: grayscale(.6) sepia(.5);
+    border-radius: 20px;
+}
+
+/*esercizio 9*/
+
+.box9 {
+    margin: 50px 100px;
+    width: 400px;
+}
+
+.box9-img {
+    transition: filter 2s, border-radius 2s, transform 2s;
+}
+.box9-img:hover {
+    filter: grayscale(.6) sepia(.5);
+    border-radius: 20px;
+    transform: scale(1.5);
+}
+
+/*esercizio 10*/
+
+.box10-icon {
+    margin: 10px;
+    font-size: 60px;
+}
+.box10-icon:hover {
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/*esercizio 11*/
+
+.box11-icon {
+    font-size: 60px;
+    margin: 20px;
+    }
+    .box11-icon:hover {
+        animation: spinALittleBit 2s linear; 
+    }
+@keyframes spinALittleBit {
+    0% {
+        transform: rotate(0);
+    }
+    90% {
+        transform: rotate(315deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+/*esercizio 12*/
+
+.box12-button a {
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 70px;
+    text-transform: uppercase;
+    border: 3px solid black;
+    color: green;
+    font-size: 20px;
+    line-height: 70px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.box12-top-white {
+    position: absolute;
+    top: -10px;
+    left: 10%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+}
+
+.box12-bottom-white {
+    position: absolute;
+    bottom: -10px;
+    right: 20%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+}
+
+.box12-button:hover .box12-top-white {
+    animation: moveTopWhite 2s linear;
+}
+@keyframes moveTopWhite {
+    0% {
+        left: 10%;
+    }
+    50% {
+        left: calc(100% - 60px);
+    }
+    100% {
+        left: 10%;
+    }
+}
+.box12-button:hover .box12-bottom-white {
+    animation: moveBottomWhite 2s linear;
+}
+@keyframes moveBottomWhite {
+    0% {
+        right: 20%;
+    }
+    50% {
+        right: calc(100% - 60px);
+    }
+    100% {
+        right: 20%;
+    }
+}
+
+/*esercizio 13*/
+
+.box13-button {
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 70px;
+    text-transform: uppercase;
+    border: 3px solid black;
+    color: green;
+    font-size: 20px;
+    line-height: 70px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.box13-top-white {
+    position: absolute;
+    top: -10px;
+    left: 10%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+}
+
+.box13-bottom-white {
+    position: absolute;
+    bottom: -10px;
+    right: 20%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+}
+
+.box13-button:hover .box13-top-white {
+    animation: movecompletely 2s linear infinite;
+}
+@keyframes moveTopWhite {
+    0% {
+        left: 10%;
+        top: -10px;
+    }
+    30% {
+        left: calc(100% - 30px);
+        top: -10px;
+    }
+    45% {
+        left: calc(100%-30px);
+        top:100%;
+    }
+    75% {
+        left:0;
+        top: 100%;
+    }
+    90% {
+        left: -15%;
+        top: -10%;
+    }
+    100% {
+        left: 10%;
+        top:-10%;
+    }
+}
+
+    .box13-button:hover .box13-bottom-white {
+        animation: moveBottomWhite 2s linear infinite;
+    }
+    @keyframes moveBottomWhite {
+        0% {
+            bottom: -10px;
+            right: 20%;
+        }
+        30%{
+            right: calc(100% -30px);
+            bottom: -10px;
+        }
+        45% {
+            right: calc(100% - 30px);
+            bottom: 100%
+        }
+        75% {
+            right: 20%;
+            bottom: 100%;
+        }
+        90% {
+            right: -15px;
+            bottom: -10px;
+        }
+        100% {
+            bottom:-10px;
+            right: 20%;
+        }
+    }
